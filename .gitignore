@@ -1,0 +1,19 @@
+# Dependency directory
+# https://docs.npmjs.com/misc/faq#should-i-check-my-node-modules-folder-into-git
+node_modules
+
+# NPM log file
+npm-debug.log
+
+# Cordova
+android_apk/*
+!android_apk/empty
+hooks
+platforms
+plugins
+www
+output/*
+cordova-hcp.json
+serve/*
+
+.cache

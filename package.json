@@ -1,0 +1,57 @@
+{
+  "name": "cordova-file-plugin-bug-report",
+  "version": "0.0.1",
+  "description": "A Cordova project to reproduce utf-8 encoding bug in the cordova-file-plugin",
+  "main": "false",
+  "scripts": {
+    "clean": "rimraf www/*",
+    "init": "rimraf platforms www plugins && mkdirp platforms www plugins && cordova prepare",
+    "copy": "copyfiles ./index.html ./test-utf-8.txt www",
+    "ios": "npm run copy && cordova run ios",
+    "android": "npm run copy && cordova run android",
+    "windows:list": "cordova run windows --list",
+    "windows": "npm run copy && cordova run windows --arch=x86"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chauthai/cordova-file-plugin-bug-report.git"
+  },
+  "keywords": [
+    "cordova",
+    "file",
+    "plugin",
+    "bug",
+    "report"
+  ],
+  "author": "Chau Thai <chau.thai@mobilexag.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chauthai/cordova-file-plugin-bug-report/issues"
+  },
+  "homepage": "https://github.com/chauthai/cordova-file-plugin-bug-report#readme",
+  "dependencies": {
+    "copyfiles": "^2.1.0",
+    "cordova-android": "^6.3.0",
+    "cordova-ios": "^4.5.2",
+    "cordova-plugin-file": "^5.0.0",
+    "cordova-windows": "^6.0.0"
+  },
+  "devDependencies": {
+    "cordova": "^8.1.2",
+    "mkdirp": "0.5.1",
+    "rimraf": "^2.6.2"
+  },
+  "cordova": {
+    "platforms": [
+      "android",
+      "ios",
+      "windows"
+    ],
+    "plugins": {
+      "cordova-plugin-file": {}
+    }
+  },
+  "engines": {
+    "node": "10.x.x"
+  }
+}
