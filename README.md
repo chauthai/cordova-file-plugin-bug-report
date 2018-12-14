@@ -1,4 +1,4 @@
-# cordova-file-plugin Bug Report
+# cordova-file-plugin encoding error bug report
 ## Abstract
 The `readAsText` function of the cordova-file-plugin causes an encoding error when reading an UTF-8 file larger than 2 megabytes on platforms iOS, Android and Windows.
 
