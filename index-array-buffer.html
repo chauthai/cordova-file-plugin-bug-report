@@ -29,13 +29,9 @@
             };
             fileReader.onloadend = () => {
               try {
-                // console.log('base64 String', fileReader.result);
                 console.log('Convert dataURL to String');
-                const jsonString = new TextDecoder('utf-8').decode((fileReader.result));
-                // console.log('Result without JSON.parse', jsonString);
-                console.log('Parsing message...');
-                const result = JSON.parse(jsonString);
-                console.log('Parse result', result);
+                const string = new TextDecoder('utf-8').decode((fileReader.result));
+                console.log('Decode result', string);
               } catch (parseError) {
                 console.error(`Error parsing file ${fileEntry.nativeURL}`, parseError);
               }
